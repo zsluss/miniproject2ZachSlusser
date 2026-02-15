@@ -14,7 +14,7 @@ df = df.sort_values(by='YEAR', ascending=False)
 champion_data=  df[df['POSTSEASON'] == 'Champions']
 champion_data['TEAM+YEAR'] = champion_data['TEAM'] + ' ' + champion_data['YEAR'].astype(str)
 #print(champion_data)
-
+#print(df.shape) - used this to ensure a 2D array 
 
 # Create a horizontal bar chart to visualize the adjusted offensive efficiency (ADJOE) of NCAA champions
 bars = champion_data['TEAM+YEAR'].values
@@ -35,7 +35,6 @@ plt.yticks(y_pos, bars)
 plt.xlabel('Adjusted Offensive Efficiency (ADJOE)')
 plt.suptitle('Adjusted Offensive Efficiency of NCAA Champions')
 plt.savefig('./charts/adjusted_offensive_efficiency.png')
-plt.show()
 
 #Create vertical bar chart to visualize the adjusted defensive efficiency (ADJDE) of NCAA champions
 bars = champion_data['TEAM+YEAR'].values
@@ -52,8 +51,6 @@ plt.xticks(rotation=90)
 plt.ylabel('Adjusted Defensive Efficiency (ADJDE)')
 plt.suptitle('Adjusted Defensive Efficiency of NCAA Champions')
 plt.savefig('./charts/adjusted_defensive_efficiency.png') 
-plt.show()
-
 #Create a scatter chart to visualize the average BARTHAG (a measure of team strength) of NCAA champions over the years
 champion_data['BARTHAG'] = champion_data['BARTHAG'].astype(float)
 bars = champion_data['TEAM+YEAR'].values
@@ -70,7 +67,6 @@ plt.xticks(rotation=90)
 plt.ylabel('Average BARTHAG')
 plt.suptitle('Average BARTHAG of NCAA Champions Over the Years')
 plt.savefig('./charts/average_barthag.png')
-plt.show()
 
 #maybe I could have done this as a for loop - but getting the means for all the different categories for champions, non-champions, and top 10 seeds
 
@@ -119,4 +115,3 @@ ax.legend(loc='upper right', ncols=3)
 ax.set_ylabel('Average Values')
 ax.set_title('Average Metrics for Champions, Non-Champions, and Top 10 Seeds')
 plt.savefig('./charts/average_metrics_comparison.png')
-plt.show()
