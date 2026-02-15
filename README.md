@@ -3,21 +3,21 @@
 ### Mini Project 2
  
  
-# *Project Title*
+# College Basketball stat analysis
  
-Simple overview of use/purpose.
+Uses NCAA Basketball stats from the last 10 years to make graphs
  
 ## Description
  
-An in-depth paragraph about your project and overview of use.
+I used stats from a kaggle data set for college basketball stats and then created several graphs showing what stats the champions from each season had and a final graph showing the difference each season. 
  
 ## Getting Started
  
 ### Dependencies
  
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
-* List pip install instructions.
+* pandas
+* numpy
+* matplotlib
  
 ### Installing
  
@@ -25,11 +25,7 @@ An in-depth paragraph about your project and overview of use.
  
 ### Executing program
  
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
+* When in the folder with the file "python index.py"
  
 ## Help
  
@@ -51,8 +47,4 @@ This project is licensed under the Zach Slusser License - see the LICENSE.md fil
 ## Acknowledgments
  
 Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
+* Data from Kaggle provided by Andrew Sundberg (https://www.kaggle.com/datasets/andrewsundberg/college-basketball-dataset) (@andrewsundberg on kaggle)
