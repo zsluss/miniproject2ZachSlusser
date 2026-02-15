@@ -34,6 +34,7 @@ ax.set_xlim(right= x_max_value * 1.1)
 plt.yticks(y_pos, bars)
 plt.xlabel('Adjusted Offensive Efficiency (ADJOE)')
 plt.suptitle('Adjusted Offensive Efficiency of NCAA Champions')
+plt.savefig('./charts/adjusted_offensive_efficiency.png')
 plt.show()
 
 #Create vertical bar chart to visualize the adjusted defensive efficiency (ADJDE) of NCAA champions
@@ -46,9 +47,11 @@ plt.axhline(y=data_mean, color='r', linestyle='--', label=f'Mean: {data_mean:.2f
 line = ax.bar(bars, data, align='center')
 x_max_value = max(data)
 ax.set_ylim(top= x_max_value * 1.1)
+plt.legend()
 plt.xticks(rotation=90)
 plt.ylabel('Adjusted Defensive Efficiency (ADJDE)')
 plt.suptitle('Adjusted Defensive Efficiency of NCAA Champions')
+plt.savefig('./charts/adjusted_defensive_efficiency.png') 
 plt.show()
 
 #Create a scatter chart to visualize the average BARTHAG (a measure of team strength) of NCAA champions over the years
@@ -66,6 +69,7 @@ plt.legend()
 plt.xticks(rotation=90)
 plt.ylabel('Average BARTHAG')
 plt.suptitle('Average BARTHAG of NCAA Champions Over the Years')
+plt.savefig('./charts/average_barthag.png')
 plt.show()
 
 #maybe I could have done this as a for loop - but getting the means for all the different categories for champions, non-champions, and top 10 seeds
@@ -114,4 +118,5 @@ ax.set_xticks(x + group_width / 2 - width / 2, names)
 ax.legend(loc='upper right', ncols=3)
 ax.set_ylabel('Average Values')
 ax.set_title('Average Metrics for Champions, Non-Champions, and Top 10 Seeds')
+plt.savefig('./charts/average_metrics_comparison.png')
 plt.show()
