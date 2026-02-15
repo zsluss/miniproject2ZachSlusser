@@ -97,6 +97,7 @@ means = {
     'Non-Champions': [nonChampion_avg_ADJOE, nonChampion_avg_ADJDE, nonChampion_avg_EFG0, nonChampion_avg_EFGD, nonChampion_avg_tempo],
     'Top 10 Seeds': [top10seeed_avg_ADJOE, top10seed_avg_ADJDE, top10seed_avg_EFG0, top10seed_avg_EFGD, top10seed_avg_tempo]
 }
+#This is to get the 3 bars to be groupted together but also have space in between the groups, I had to look up how to do this because using the documentation from matplotlib was causing overlap.
 width = 0.5
 group_gap = 0.5
 group_width = width * len(means)
