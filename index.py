@@ -22,7 +22,11 @@ data = champion_data['ADJOE'].values
 y_pos = np.arange(len(data))
 
 fig, ax =plt.subplots()
-ax.barh(y_pos, data, align='center')
+ax.barh(y_pos, data, align='center', color="pink")
+#adding mean line for this one 
+data_mean = np.mean(data)
+plt.axvline(x=data_mean, color='r', linestyle='--', label=f'Mean: {data_mean:.2f}')
+plt.legend()
 
 x_max_value = max(data) 
 ax.set_xlim(right= x_max_value * 1.1)
@@ -36,6 +40,9 @@ plt.show()
 bars = champion_data['TEAM+YEAR'].values
 data = champion_data['ADJDE'].values
 fig ,ax = plt.subplots()
+#aftering adding a mean line for BARTHAG, I decided to add it to to others.
+data_mean = np.mean(data)
+plt.axhline(y=data_mean, color='r', linestyle='--', label=f'Mean: {data_mean:.2f}')
 line = ax.bar(bars, data, align='center')
 x_max_value = max(data)
 ax.set_ylim(top= x_max_value * 1.1)
@@ -50,7 +57,12 @@ bars = champion_data['TEAM+YEAR'].values
 data = champion_data['BARTHAG'].values
 
 fig, ax = plt.subplots()
+
 ax.scatter(bars, data)
+#added a horizontal line to show the mean of the BARTHAG values for champions
+data_mean = np.mean(data)
+plt.axhline(y=data_mean, color='r', linestyle='--', label=f'Mean: {data_mean:.2f}')
+plt.legend()
 plt.xticks(rotation=90)
 plt.ylabel('Average BARTHAG')
 plt.suptitle('Average BARTHAG of NCAA Champions Over the Years')
