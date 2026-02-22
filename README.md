@@ -18,6 +18,7 @@ I used stats from a kaggle data set for college basketball stats and then create
 * pandas
 * numpy
 * matplotlib
+* os
  
 ### Installing
  
